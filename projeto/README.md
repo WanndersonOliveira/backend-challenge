@@ -20,7 +20,7 @@
 <h4>Instruções para executar o software em máquina local</h4>
 <br><br>
 <ol>
-	<li>Executar o comando <i>git clone https://github.com/rits-tecnologia/backend-challenge.git</i> no CMD do Windows ou no shell do Linux/Mac.</li>
+	<li>Executar o comando <i>git clone https://github.com/WanndersonOliveira/backend-challenge.git</i> no CMD do Windows ou no shell do Linux/Mac.</li>
 	<li>Acessar a pasta <i>backend-challenge</i> no diretório em que ela foi baixada. Extrair a subpasta <b>projeto</b> de dentro da pasta para o diretório de sua escolha</li>
 	<li>Ligar o Gerenciador de Banco de Dados MySQL.</li>
 	<li>Criar um banco de dados chamado <b>blacklab</b>.</li>
