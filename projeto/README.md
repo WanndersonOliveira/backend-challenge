@@ -29,7 +29,7 @@
 	<li>Executar o comando <i>php artisan serve</i></li>
 	<li>Acessar a pasta <b>routes</b> dentro de <b>projeto</b>, abrir o arquivo <i>web.php</i> para consultar as rotas.</li>
 	<li>Caso seja necessário (e se vossa senhoria estiver usando o Linux), executar os testes para API no arquivo <i>teste.php</i> usando comando <i>php teste.php</i> na raiz de <b>backend-challenge</b>. (Caso não dê certo, procurar baixar o módulo <b><i>php-curl</i></b>)</li>
-	<li>O teste de API acima só implementa dois casos de uso: Cadastrar Cliente e Login Cliente, pois alguns casos de uso de cliente necessita de dados cadastrados pelo administrador.</li>
+	<li>O teste de API acima só implementa dois casos de uso: Cadastrar Cliente e Login Cliente, pois alguns casos de uso de cliente necessita de dados cadastrados pelo administrador, incorrendo no risco de não funcionar em vossa máquina.</li>
 </ol>
 
 <br>
