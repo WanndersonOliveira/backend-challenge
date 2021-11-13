@@ -78,7 +78,7 @@ class PedidoDAO
 
     	//foreach($pedprod as $p){
     	//	$p->delete();
-    	DB::table('ped_prod')->where('cod_ped', '=', $id)->delete();;
+    	DB::table('ped_prod')->where('cod_ped', '=', $id)->delete();
     	//}
 
     	$pedido = Pedido::find($id);

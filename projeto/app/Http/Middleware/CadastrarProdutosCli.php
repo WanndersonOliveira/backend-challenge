@@ -16,7 +16,6 @@ class CadastrarProdutosCli
      */
     public function handle(Request $request, Closure $next)
     {
-        error_log("message");
         if(is_null($request->input('id'))){
             return response()->json(["msg" => "Para cadastrar pedido o cliente deve estar logado"]);
         }

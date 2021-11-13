@@ -26,15 +26,16 @@ class ClienteDAO
 
 
     public function checar($email, $telefone, $senha){
-    	$cliente = Cliente::where('email','=',$email, 'and', '
-    		telefone','=',$telefone)->get();
+    	$cliente = Cliente::where('email','=',$email)->get();
+
+        $cliente2 = Cliente::where('telefone','=',$telefone)->get();
 
     	$check = 0;
 
-    	if(sizeof($cliente) == 0){
+    	if(sizeof($cliente) == 0 & sizeof($cliente2) == 0){
     		$check = 0; 	//Não tem email, senha ou telefone no banco de dados.
     	} else {
-    		if(Hash::check($senha, $cliente->password)){
+    		if(Hash::check($senha, $cliente[0]->password)){
     			$check = 1;		//Tem email, senha e telefone no banco de dados.
     		} else {	
     			$check = 2; //Tem email e telefone no banco de dados mas com senha diferente.
@@ -66,12 +67,11 @@ class ClienteDAO
     	if(sizeof($cliente) == 0){
     		return null;
     	} else {
-    		//if(Hash::check($senha, $cliente->password)){
+    		if(Hash::check($senha, $cliente[0]->password)){
     			return $cliente;
-    		//} else {
-    		//	error_log("5");
-    		//	return null;
-    		//}
+    		} else {
+    			return null;
+    		}
     	}	
     }
 }

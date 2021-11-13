@@ -17,12 +17,11 @@ class LoginCliente
     public function handle(Request $request, Closure $next)
     {
 
-        error_log($request->input('senha'));
-        if(strlen($request->input('email')) == 0){
+        if(strlen($request->input('email')) == 0 | is_null($request->input('email'))){
             return response()->json(["msg" => "Email não informado"]);
         }
 
-        if(strlen($request->input('senha')) == 0){
+        if(strlen($request->input('senha')) == 0 | is_null($request->input('senha'))){
             return response()->json(["msg" => "Senha não informada"]);
         }
 

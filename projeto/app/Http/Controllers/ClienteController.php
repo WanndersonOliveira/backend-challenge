@@ -123,6 +123,10 @@ class ClienteController extends Controller
             return response()->json(["msg" => "Para cadastrar pedido o cliente deve estar logado"]);
         }
 
+        if(is_null($id){
+            return response()->json(["msg" => "Deve passar o id do pedido via url"]);
+        }
+
         $pedidoDAO = new PedidoDAO();
 
         $produtos = $pedidoDAO->selecionarProdutos($id);
@@ -137,6 +141,10 @@ class ClienteController extends Controller
     public function excluirPedido(Request $req, $id){
         if(is_null($req->input('id'))){
             return response()->json(["msg" => "Para cadastrar pedido o cliente deve estar logado"]);
+        }
+
+         if(is_null($id){
+            return response()->json(["msg" => "Deve passar o id do pedido via url"]);
         }
 
         $pedidoDAO = new PedidoDAO();
